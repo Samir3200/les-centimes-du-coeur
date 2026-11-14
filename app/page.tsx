@@ -410,7 +410,7 @@ export default function Home() {
 
                   {index === 3 && (
                     <Image
-                      src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_600/v1794677248/La_solidarit%C3%A9_change_une_vie_soqwaq.png"
+                      src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794687302/WhatsApp_Image_2026-11-14_at_21.07.18_pv3cjy.jpg"
                       alt="La solidarité change une vie"
                       width={1536}
                       height={1024}
