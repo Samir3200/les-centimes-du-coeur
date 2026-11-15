@@ -7,10 +7,8 @@ import { motion } from "motion/react";
 import {
   ArrowRight,
   Heart,
-  HandHeart,
   Menu,
   X,
-  Globe2,
   Baby,
   Utensils,
   GraduationCap,
@@ -88,14 +86,14 @@ export default function Home() {
               <a
                 key={label}
                 href={href}
-                className="text-lg font-medium text-white/85 transition hover:text-[#E4D29B]"
+                className="relative inline-block text-lg font-medium text-white/85 transition hover:text-[#E4D29B] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#E4D29B] after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:after:scale-x-100"
               >
                 {label}
               </a>
             ))}
           </div>
 
-         
+
           <button
             type="button"
             aria-label={menuOpen ? "Fermer le menu" : "Ouvrir le menu"}
@@ -313,7 +311,7 @@ export default function Home() {
 
               <div className="mt-8 grid grid-cols-3 items-start gap-4">
                 <Image
-                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_500/v1794672522/Affiche_solidaire_Les_Centimes_du_C%C5%93ur_xkhg8v.png"
+                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794768874/Affiche_%C3%A0_fond_vert_profond_fb7zfp.png"
                   alt="Affiche solidaire des Centimes du Cœur"
                   width={800}
                   height={800}
@@ -322,7 +320,7 @@ export default function Home() {
                   style={{ borderRadius: "0.5rem" }}
                 />
                 <Image
-                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_500/v1794674265/Les_Centimes_solidaires___chaque_c%C5%93ur_agit_nfpreg.png"
+                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794769173/Affiche_solidaire_verte_avec_footer_sombre_ma5sve.png"
                   alt="Les Centimes solidaires, chaque cœur agit"
                   width={1536}
                   height={1024}
@@ -444,8 +442,15 @@ export default function Home() {
       >
         <div className="relative mx-auto grid max-w-7xl items-center gap-16 lg:grid-cols-2">
           <div>
-            <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10">
-              <Globe2 size={34} className="text-[#D9C58B]" />
+            <div className="mb-8 flex h-16 w-16 items-center justify-center rounded-2xl bg-white/0">
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794748248/Globe_terrestre_sur_fond_transparent_rht96d.png"
+                alt=""
+                width={1400}
+                height={1300}
+                unoptimized
+                className="h-25 w-25 object-contain"
+              />
             </div>
 
             <p className="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-[#D9C58B]">
@@ -476,7 +481,14 @@ export default function Home() {
 
           <div className="grid gap-5 sm:grid-cols-2">
             <div className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur-sm">
-              <MapPin size={34} className="mb-8 text-[#D9C58B]" />
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794749173/Carte_de_France_paysage_champ%C3%AAtre_et_Tour_Eiffel-1_guji9y.png"
+                alt=""
+                width={1293}
+                height={1216}
+                unoptimized
+                className="mb-8 h-12 w-12 object-contain"
+              />
               <h3 className="mb-3 text-2xl font-bold">France</h3>
               <p className="leading-7 text-white/65">
                 Aide aux familles, soutien aux nouveau-nés,
@@ -485,7 +497,14 @@ export default function Home() {
             </div>
 
             <div className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur-sm">
-              <Globe2 size={34} className="mb-8 text-[#D9C58B]" />
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794749171/Carte_d_Afrique_%C3%A9co-naturelle_stylis%C3%A9e-2_qsmtrr.png"
+                alt=""
+                width={1233}
+                height={1275}
+                unoptimized
+                className="mb-8 h-12 w-12 object-contain"
+              />
               <h3 className="mb-3 text-2xl font-bold">
                 Afrique de l&apos;Ouest
               </h3>
@@ -507,13 +526,8 @@ export default function Home() {
               'linear-gradient(rgba(233, 239, 227, 0.20), rgba(233, 239, 227, 0.20)), url("https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_1600/v1794683372/C%C5%93ur_dor%C3%A9_entour%C3%A9_de_mains_rayonnantes_wsg9rl.png")',
           }}
         >
-          <HandHeart
-            size={48}
-            className="mx-auto mb-7 text-[#267347]"
-            strokeWidth={1.5}
-          />
 
-          <p className="mb-5 text-sm font-bold uppercase tracking-[0.25em] text-[#6D925D]">
+          <p className="mb-5 text-xl font-bold uppercase tracking-[0.25em] text-[white]">
             Agir ensemble
           </p>
 
@@ -549,7 +563,14 @@ export default function Home() {
       </section>
 
       {/* REJOINDRE */}
-      <section id="rejoindre" className="bg-white px-6 py-24 lg:px-12">
+      <section
+        id="rejoindre"
+        className="bg-white bg-cover bg-center px-6 py-40 lg:px-12"
+        style={{
+          backgroundImage:
+            'linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("https://res.cloudinary.com/dsybzvkmv/image/upload/v1794769955/Les_Centimes_du_C%C5%93ur___votre_soutien_change_des_vies_xxvrnl.png")',
+        }}
+      >
         <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-10 md:flex-row md:items-center">
           <div>
             <p className="mb-4 text-sm font-bold uppercase tracking-[0.25em] text-[#7B995D]">
@@ -580,7 +601,14 @@ export default function Home() {
         <div className="mx-auto grid max-w-7xl gap-12 md:grid-cols-3">
           <div>
             <div className="mb-5 flex items-center gap-3">
-              <HandHeart size={38} className="text-[#D9C58B]" />
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794770341/C%C5%93ur_vert_avec_main_protectrice_zgxltj.png"
+                alt=""
+                width={1536}
+                height={1024}
+                unoptimized
+                className="h-15 w-15 object-contain"
+              />
               <span className="text-lg font-extrabold uppercase">
                 Les Centimes du Cœur
               </span>
@@ -620,7 +648,14 @@ export default function Home() {
                 className="flex items-center gap-3"
               >
                 <Phone size={17} />
-                06 24 44 33 78
+                06 24 44 33 78 : Président
+              </a>
+              <a
+                href="tel:+33665385017"
+                className="flex items-center gap-3"
+              >
+                <Phone size={17} />
+                06 65 38 50 17 : Vice-présidente
               </a>
 
               <p className="flex items-center gap-3">
@@ -631,13 +666,35 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="mx-auto mt-16 flex max-w-7xl flex-col justify-between gap-4 border-t border-white/15 pt-8 text-xs text-white/45 sm:flex-row">
+        <div className="mx-auto mt-16 flex max-w-7xl flex-col justify-between gap-4 border-t border-white/15 pt-8 text-xs text-white/45 sm:flex-row sm:items-center">
           <p>
             © Les Centimes du Cœur.
             Tous droits réservés.
           </p>
 
-          <p>Fait avec amour et solidarité.</p>
+          <div className="flex items-center gap-5">
+            <a
+              href="https://www.facebook.com/share/19qTKykzdu/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Facebook des Centimes du Cœur"
+              title="Facebook"
+              className="transition hover:text-[#D9C58B]"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/lescentimesducoeurasso?vrfl=MTlrdHAwMGJxbmtweA=="
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Instagram des Centimes du Cœur"
+              title="Instagram"
+              className="transition hover:text-[#D9C58B]"
+            >
+              Instagram
+            </a>
+            <p>Fait avec amour et solidarité.</p>
+          </div>
         </div>
       </footer>
     </main>
