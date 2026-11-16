@@ -4,7 +4,7 @@
 import { useState, type FormEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Heart, LockKeyhole, Mail, ArrowRight } from "lucide-react";
+import { Heart, LockKeyhole, Mail, ArrowLeft, ArrowRight } from "lucide-react";
 import { authClient } from "@/lib/auth_clients";
 
 export default function ConnexionPage() {
@@ -164,6 +164,13 @@ export default function ConnexionPage() {
             </Link>
           </p>
         </form>
+
+        <Link
+          href="/"
+          className="mt-6 flex items-center justify-center gap-2 text-sm font-medium text-[#17643D] hover:underline"
+        >
+          <ArrowLeft size={16} /> Retour à l&apos;accueil
+        </Link>
 
         <p className="mt-7 text-center text-xs text-slate-500">
           La force de la solidarité accessible à tous.

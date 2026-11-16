@@ -36,7 +36,7 @@ export default async function EspacePersonnelPage() {
   // On recherche le profil uniquement à partir de
   // l'identifiant authentifié, jamais depuis l'URL.
   const profiles = await sql`
-    SELECT id, first_name, last_name, email, created_at
+    SELECT id, first_name, last_name, email, phone, created_at
     FROM public.users
     WHERE auth_user_id = ${session.user.id}
       AND profile_completed = TRUE
@@ -114,7 +114,18 @@ export default async function EspacePersonnelPage() {
               Bienvenue dans votre espace personnel.
             </p>
           </div>
-          <LogoutButton />
+          <div className="flex flex-wrap items-center gap-3">
+            {roles.some((item) => item.role === "admin") && (
+              <Link
+                href="/admin"
+                className="inline-flex items-center justify-center rounded-xl bg-[#103C2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#17643D]"
+              >
+                Tableau de bord administrateur
+              </Link>
+            )}
+
+            <LogoutButton />
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
@@ -135,6 +146,11 @@ export default async function EspacePersonnelPage() {
               <div>
                 <p className="text-slate-500">Adresse email</p>
                 <p className="mt-1 font-medium">{profile.email}</p>
+              </div>
+
+              <div>
+                <p className="text-slate-500">Numéro de téléphone</p>
+                <p className="mt-1 font-medium">{profile.phone || "Non renseigné"}</p>
               </div>
 
               <div className="flex items-center gap-2 text-slate-500">

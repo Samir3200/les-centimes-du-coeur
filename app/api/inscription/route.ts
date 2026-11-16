@@ -2,6 +2,7 @@
 import { NextResponse } from "next/server";
 import { auth } from "@/lib/auth";
 import { sql } from "@/lib/db";
+import { isValidPhone } from "@/lib/phone";
 
 
 type PublicRole = "adherent" | "partenaire" | "donateur";
@@ -30,6 +31,7 @@ export async function POST(request: Request) {
     const firstName = String(body.firstName ?? "").trim();
     const lastName = String(body.lastName ?? "").trim();
     const email = String(body.email ?? "").trim().toLowerCase();
+    const phone = typeof body.phone === "string" ? body.phone.trim() : "";
     const password = String(body.password ?? "");
     const role = String(body.role ?? "");
 
@@ -46,6 +48,16 @@ export async function POST(request: Request) {
     ) {
       return NextResponse.json(
         { error: "Veuillez vérifier les informations saisies." },
+        { status: 400 }
+      );
+    }
+
+    if (
+      (body.phone != null && typeof body.phone !== "string") ||
+      (phone && !isValidPhone(phone))
+    ) {
+      return NextResponse.json(
+        { error: "Veuillez saisir un numéro de téléphone valide (7 à 15 chiffres)." },
         { status: 400 }
       );
     }
@@ -105,6 +117,7 @@ export async function POST(request: Request) {
           first_name,
           last_name,
           email,
+          phone,
           profile_completed
         )
         VALUES (
@@ -112,6 +125,7 @@ export async function POST(request: Request) {
           ${firstName},
           ${lastName},
           ${email},
+          ${phone || null},
           FALSE
         )
       `,

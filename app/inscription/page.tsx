@@ -21,6 +21,7 @@ export default function InscriptionPage() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [loading, setLoading] = useState(false);
@@ -50,6 +51,7 @@ export default function InscriptionPage() {
           firstName,
           lastName,
           email,
+          phone,
           password,
           role,
         }),
@@ -207,6 +209,22 @@ export default function InscriptionPage() {
                 autoComplete="email"
                 className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#17643D]"
                 placeholder="exemple@email.com"
+              />
+            </div>
+
+            <div className="md:col-span-2">
+              <label htmlFor="phone" className="mb-2 block text-sm font-medium">
+                Numéro de téléphone (facultatif)
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                maxLength={30}
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                autoComplete="tel"
+                className="w-full rounded-xl border border-slate-200 px-4 py-3 outline-none focus:border-[#17643D]"
+                placeholder="Ex. : 06 12 34 56 78 ou +33 6 12 34 56 78"
               />
             </div>
 
