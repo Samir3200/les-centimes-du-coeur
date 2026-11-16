@@ -47,14 +47,35 @@ export default function SiteFooter() {
               lescentimesducoeur@gmail.com
             </a>
 
-            <a href="tel:+33624443378" className="flex items-center gap-3">
-              <Phone size={17} />
-              06 24 44 33 78 : Président
-            </a>
-            <a href="tel:+33665385017" className="flex items-center gap-3">
-              <Phone size={17} />
-              06 65 38 50 17 : Vice-présidente
-            </a>
+            <div className="flex items-center gap-3">
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794863372/Affiche_solidaire_verte_Aka_Pr%C3%A9sident_fhgwjn.png"
+                alt="Affiche de solidarité présentant Aka, président de l'association"
+                width={1254}
+                height={1254}
+                unoptimized
+                className="h-auto w-24 shrink-0 rounded-xl"
+              />
+              <a href="tel:+33624443378" className="flex items-center gap-3">
+                <Phone size={17} />
+                06 24 44 33 78 : Président
+              </a>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Image
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794863247/WhatsApp_Image_2026-11-16_pg2e8o.jpg"
+                alt="Affiche de solidarité présentant la vice-présidente de l'association"
+                width={1254}
+                height={1254}
+                unoptimized
+                className="h-auto w-24 shrink-0 rounded-xl"
+              />
+              <a href="tel:+33665385017" className="flex items-center gap-3">
+                <Phone size={17} />
+                06 65 38 50 17 : Vice-présidente
+              </a>
+            </div>
 
             <p className="flex items-center gap-3">
               <MapPin size={17} />

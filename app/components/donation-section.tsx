@@ -29,7 +29,9 @@ export default function DonationSection() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <a
-            href="mailto:lescentimesducoeur@gmail.com?subject=Je%20souhaite%20faire%20un%20don"
+            href="https://lescentimesducoeur.fr/#don"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-3 rounded-full bg-[#17643D] px-9 py-4 font-bold text-white transition hover:bg-[#0F4C2E]"
           >
             Faire un don <Heart size={19} />

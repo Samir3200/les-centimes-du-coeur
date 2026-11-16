@@ -72,7 +72,7 @@ export default function ActionsSection() {
                   width={1707}
                   height={921}
                   unoptimized
-                  className="-mx-8 -mt-8 mb-8 aspect-[3/2] h-auto w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
+                  className="-mx-8 -mt-8 mb-8 h-48 w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover object-left"
                 />
               )}
 
@@ -83,7 +83,7 @@ export default function ActionsSection() {
                   width={1254}
                   height={1254}
                   unoptimized
-                  className="-mx-8 -mt-8 mb-8 aspect-[3/2] h-auto w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
+                  className="-mx-8 -mt-8 mb-8 h-48 w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
                 />
               )}
 
@@ -94,18 +94,18 @@ export default function ActionsSection() {
                   width={1402}
                   height={1122}
                   unoptimized
-                  className="-mx-8 -mt-8 mb-8 aspect-[3/2] h-auto w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
+                  className="-mx-8 -mt-8 mb-8 h-48 w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
                 />
               )}
 
               {index === 3 && (
                 <Image
-                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794687302/WhatsApp_Image_2026-11-14_at_21.07.18_pv3cjy.jpg"
+                  src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794861732/WhatsApp_Image_2026-11-16_at_19.03.39_wclfws.jpg"
                   alt="La solidarité change une vie"
                   width={1536}
                   height={1024}
                   unoptimized
-                  className="-mx-8 -mt-8 mb-8 aspect-[3/2] h-auto w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
+                  className="-mx-8 -mt-8 mb-8 h-48 w-[calc(100%+4rem)] max-w-none rounded-t-3xl object-cover"
                 />
               )}
 
