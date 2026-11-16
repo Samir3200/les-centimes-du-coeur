@@ -40,6 +40,7 @@ export default async function EspacePersonnelPage() {
     FROM public.users
     WHERE auth_user_id = ${session.user.id}
       AND profile_completed = TRUE
+      AND status = 'active'
     LIMIT 1
   `;
 

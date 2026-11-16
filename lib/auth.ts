@@ -1,6 +1,6 @@
 
 import "server-only";
-
+import { sql } from "@/lib/db";
 import { betterAuth } from "better-auth";
 import { PostgresDialect } from "kysely";
 import { Pool } from "pg";
@@ -27,7 +27,28 @@ export const auth = betterAuth({
     type: "postgres",
     schemaName: "auth",
   },
+  databaseHooks: {
+    session: {
+      create: {
+        before: async (session) => {
+          const users = await sql`
+            SELECT status
+            FROM public.users
+            WHERE auth_user_id = ${session.userId}
+            LIMIT 1
+          `;
 
+          // Un compte explicitement désactivé
+          // ne peut pas ouvrir une nouvelle session.
+          if (users.length > 0 && users[0].status !== "active") {
+            return false;
+          }
+
+          return true;
+        },
+      },
+    },
+  },
   emailAndPassword: {
     enabled: true,
     minPasswordLength: 8,
