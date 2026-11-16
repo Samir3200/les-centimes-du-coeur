@@ -113,8 +113,20 @@ export default async function EspacePersonnelPage() {
             <p className="mt-3 text-slate-600">
               Bienvenue dans votre espace personnel.
             </p>
+                   </div>
+
+          <div className="flex flex-wrap items-center gap-3">
+            {roles.some((item) => item.role === "admin") && (
+              <Link
+                href="/admin"
+                className="inline-flex items-center justify-center rounded-xl bg-[#103C2A] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#17643D]"
+              >
+                Tableau de bord administrateur
+              </Link>
+            )}
+
+            <LogoutButton />
           </div>
-          <LogoutButton />
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
