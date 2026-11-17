@@ -9,6 +9,7 @@ import {
   UserRound,
   Handshake,
   HeartHandshake,
+  ArrowLeft,
   ArrowRight,
 } from "lucide-react";
 
@@ -96,6 +97,13 @@ export default function InscriptionPage() {
   return (
     <main className="min-h-screen bg-[#F7F8F5] px-4 py-14 text-[#092B20]">
       <div className="mx-auto max-w-3xl">
+        <Link
+          href="/"
+          className="mb-8 inline-flex items-center gap-2 text-sm font-medium text-[#17643D] hover:underline"
+        >
+          <ArrowLeft size={16} /> Retour à l&apos;accueil
+        </Link>
+
         <div className="mb-9 text-center">
           <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-[#103C2A] text-[#D9C58B]">
             <Heart size={27} />

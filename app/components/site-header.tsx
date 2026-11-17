@@ -21,21 +21,22 @@ export default function SiteHeader() {
             width={330}
             height={110}
             priority
-            className="h-auto w-[210px] object-contain sm:w-[280px] lg:w-[330px]"
+            className="h-auto w-[210px] object-contain sm:w-[280px] lg:w-[250px] xl:w-[330px]"
           />
         </a>
 
-        <div className="hidden items-center gap-8 lg:flex">
+        <div className="hidden items-center gap-4 lg:flex xl:gap-8">
           {[
             ["Notre mission", "#mission"],
             ["Nos actions", "#actions"],
             ["France & Afrique", "#international"],
             ["Nous rejoindre", "#rejoindre"],
+            ["Nous contacter", "/contact"],
           ].map(([label, href]) => (
             <a
               key={label}
               href={href}
-              className="relative inline-block text-lg font-medium text-white/85 transition hover:text-[#E4D29B] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#E4D29B] after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:after:scale-x-100"
+              className="relative inline-block whitespace-nowrap text-lg font-medium text-white/85 transition hover:text-[#E4D29B] after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-full after:origin-left after:scale-x-0 after:bg-[#E4D29B] after:transition-transform after:duration-300 hover:after:scale-x-100 focus-visible:after:scale-x-100"
             >
               {label}
             </a>
@@ -72,6 +73,7 @@ export default function SiteHeader() {
             ["Nos actions", "#actions"],
             ["France & Afrique", "#international"],
             ["Nous rejoindre", "#rejoindre"],
+            ["Nous contacter", "/contact"],
             ["Faire un don", "#don"],
           ].map(([label, href]) => (
             <a

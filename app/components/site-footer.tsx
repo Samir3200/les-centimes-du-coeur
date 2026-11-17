@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function SiteFooter() {
@@ -33,6 +34,7 @@ export default function SiteFooter() {
             <a href="#actions">Nos actions</a>
             <a href="#international">France & Afrique</a>
             <a href="#don">Faire un don</a>
+            <Link href="/contact">Nous contacter</Link>
           </div>
         </div>
 
