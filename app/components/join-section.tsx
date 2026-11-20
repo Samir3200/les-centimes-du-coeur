@@ -21,7 +21,7 @@ export default function JoinSection() {
             Ensemble, nous pouvons faire bien plus.
           </h2>
 
-          <p className="mt-5 max-w-xl leading-8 text-[#687A6C]">
+          <p className="mt-5 max-w-xl leading-8 font-bold text-[black]">
             Bénévoles, entreprises, associations et citoyens :
             chacun peut apporter sa pierre à l&apos;édifice.
           </p>

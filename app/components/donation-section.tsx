@@ -10,13 +10,13 @@ export default function DonationSection() {
             'linear-gradient(rgba(233, 239, 227, 0.20), rgba(233, 239, 227, 0.20)), url("https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_1600/v1794683372/C%C5%93ur_dor%C3%A9_entour%C3%A9_de_mains_rayonnantes_wsg9rl.png")',
         }}
       >
-        <p className="mb-5 text-xl font-bold uppercase tracking-[0.25em] text-[white]">
+        <p className="mb-5 text-2xl font-bold uppercase tracking-[0.25em] text-[white]">
           Agir ensemble
         </p>
 
         <h2 className="mx-auto max-w-3xl text-4xl font-semibold leading-tight sm:text-5xl">
           Et si votre prochain geste changeait
-          <span className="font-serif italic text-[#7B995D]">
+          <span className="font-serif italic text-[grey]">
             {" "}une vie ?
           </span>
         </h2>

@@ -51,7 +51,7 @@ export default function InternationalSection() {
         </div>
 
         <div className="grid gap-5 sm:grid-cols-2">
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur-sm">
+          <div className="rounded-3xl mt-50 border border-white/15 bg-white/5 p-8 backdrop-blur-sm">
             <Image
               src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794749173/Carte_de_France_paysage_champ%C3%AAtre_et_Tour_Eiffel-1_guji9y.png"
               alt=""
@@ -67,7 +67,7 @@ export default function InternationalSection() {
             </p>
           </div>
 
-          <div className="rounded-3xl border border-white/15 bg-white/5 p-8 backdrop-blur-sm">
+          <div className="rounded-3xl mt-50 order border-white/15 bg-white/5 p-8 backdrop-blur-sm">
             <Image
               src="https://res.cloudinary.com/dsybzvkmv/image/upload/f_auto,q_auto,w_128/v1794749171/Carte_d_Afrique_%C3%A9co-naturelle_stylis%C3%A9e-2_qsmtrr.png"
               alt=""

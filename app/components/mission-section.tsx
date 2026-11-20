@@ -51,7 +51,7 @@ export default function MissionSection() {
 
             <div className="mt-8 grid grid-cols-3 items-start gap-4">
               <Image
-                src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1794768874/Affiche_%C3%A0_fond_vert_profond_fb7zfp.png"
+                src="https://res.cloudinary.com/dsybzvkmv/image/upload/v1795216622/Distribution_solidaire_au_coucher_du_soleil_g4cw7r.png"
                 alt="Affiche solidaire des Centimes du Cœur"
                 width={800}
                 height={800}
